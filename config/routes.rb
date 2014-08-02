@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   
   get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via:'delete'
+  
   get '/help', to: 'static_pages#help'
   
   get '/home', to: 'static_pages#home'
